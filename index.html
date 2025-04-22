@@ -1,7 +1,669 @@
-<html>
-<head>
-</head>
-<body>
-  It works!
-</body>
-</html>
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Demo page of Multi-interaction TTS toward professional recording reproduction</title>
+        <style>
+
+.vscode-dark img[src$=\#gh-light-mode-only],
+.vscode-light img[src$=\#gh-dark-mode-only] {
+	display: none;
+}
+
+</style>
+        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+<style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        <style>
+.task-list-item {
+    list-style-type: none;
+}
+
+.task-list-item-checkbox {
+    margin-left: -20px;
+    vertical-align: middle;
+    pointer-events: none;
+}
+</style>
+        
+    </head>
+    <body class="vscode-body vscode-light">
+        <h1 id="multi-interaction-tts-toward-professional-recording-reproduction--">Multi-interaction TTS toward professional recording reproduction  <!-- omit in toc --></h1>
+<p>Anonymous submission to ISCA SSW13 (2025)</p>
+<h1 id="contents--">Contents  <!-- omit in toc --></h1>
+<ul>
+<li><a href="#iterative-refinement-experiments">Iterative refinement experiments</a></li>
+<li><a href="#performance-of-the-proposed-method-according-to-the-direction-difficulty">Performance of the proposed method according to the direction difficulty</a></li>
+</ul>
+<h1 id="detail-of-compared-methods">Detail of compared methods</h1>
+<p>The style refining process over a series of sessions is defined as the &quot;direction-cycle&quot;.
+The following table provides a clear understanding of I/O for the both comparative methods Actor-Guided(oracle) and Iterative(ours).</p>
+<table>
+<thead>
+<tr>
+<th>Conditions</th>
+<th>Session 1</th>
+<th></th>
+<th></th>
+<th>Session 2</th>
+<th></th>
+<th></th>
+<th>Session 3</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>Input</td>
+<td></td>
+<td>Output</td>
+<td>Input</td>
+<td></td>
+<td>Output</td>
+<td>Input</td>
+<td></td>
+<td>Output</td>
+</tr>
+<tr>
+<td></td>
+<td>Speech prompt</td>
+<td>Direction 1</td>
+<td>Speech 1</td>
+<td>Speech prompt</td>
+<td>Direction 2</td>
+<td>Speech 2</td>
+<td>Speech prompt</td>
+<td>Direction 3</td>
+<td>Speech 3</td>
+</tr>
+<tr>
+<td>Actor-Guided(oracle)</td>
+<td>Recorded-1</td>
+<td>✗</td>
+<td>Guided-1</td>
+<td>Recored-2</td>
+<td>✗</td>
+<td>Guided-2</td>
+<td>Recorded-3</td>
+<td>✗</td>
+<td>Guided-3</td>
+</tr>
+<tr>
+<td>Iterative (ours)</td>
+<td>Recorded-0</td>
+<td>✓</td>
+<td>Iterative-1</td>
+<td>Iterative-1</td>
+<td>✓</td>
+<td>Iterative-2</td>
+<td>Iterative-2</td>
+<td>✓</td>
+<td>Iterative-3</td>
+</tr>
+</tbody>
+</table>
+<h1 id="speech-samples">Speech samples</h1>
+<p>If you are having trouble listening to the audios, try refreshing the page.</p>
+<ul>
+<li>HiFi-GAN was used for all speech sample generation</li>
+<li>All speakers in this page are chosen from test data</li>
+</ul>
+<h2 id="comparison-on-iterative-style-refinement">Comparison on iterative style refinement</h2>
+<h3 id="fmh20243q_interact10_tsukareta117">FMH.20243Q_interact@10_tsukareta@117</h3>
+<h4 id="direction-cycle1">Direction-cycle1</h4>
+<p>Direction: 少し息を吐くように始めてください。疲れた感じが伝わるように、発話の冒頭で声に少し息を混ぜて、声量を抑えて話しましょう。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Actor-Guided(oracle)</th>
+<th style="text-align:center">Iterative-ours(ours)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><audio controls controlslist="nodownload" src="data/upper__FMH.20243Q_interact@10_tsukareta@117/7_1.wav" preload="metadata"></audio></td>
+<td style="text-align:center"><audio controls controlslist="nodownload" src="data/proposed__FMH.20243Q_interact@10_tsukareta@117-1/6_1.wav" preload="metadata"></audio></td>
+</tr>
+</tbody>
+</table>
+<h4 id="direction-cycle2">Direction-cycle2</h4>
+<p>Direction: テンポをもう少しゆっくりにしましょう。言葉の間に少し間を置いて、話すテンポを落とすことで、疲れが声に表れるようにしましょう。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Actor-Guided(oracle)</th>
+<th style="text-align:center">Iterative-ours(ours)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><audio controls controlslist="nodownload" src="data/upper__FMH.20243Q_interact@10_tsukareta@117/7_2.wav" preload="metadata"></audio></td>
+<td style="text-align:center"><audio controls controlslist="nodownload" src="data/proposed__FMH.20243Q_interact@10_tsukareta@117-1/6_2.wav" preload="metadata"></audio></td>
+</tr>
+</tbody>
+</table>
+<h4 id="direction-cycle3">Direction-cycle3</h4>
+<p>Direction: 語尾を落としましょう。フレーズの最後を弱くし、少し力が抜けたような感じで話してみてください。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Actor-Guided(oracle)</th>
+<th style="text-align:center">Iterative-ours(ours)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><audio controls controlslist="nodownload" src="data/upper__FMH.20243Q_interact@10_tsukareta@117/7_3.wav" preload="metadata"></audio></td>
+<td style="text-align:center"><audio controls controlslist="nodownload" src="data/proposed__FMH.20243Q_interact@10_tsukareta@117-1/6_3.wav" preload="metadata"></audio></td>
+</tr>
+</tbody>
+</table>
+<h3 id="fmh20243q_interact20_chintsuu92">FMH.20243Q_interact@20_chintsuu@92</h3>
+<h4 id="direction-cycle1-1">Direction-cycle1</h4>
+<p>Direction: 少し言葉に力を入れすぎている感じがあるので、もう少し声のボリュームを落として、疲れたような、少し途切れがちな息遣いを意識してみましょう。特に最初の部分で、声を詰まらせるような感覚で始めてください。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Actor-Guided(oracle)</th>
+<th style="text-align:center">Iterative-ours(ours)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><audio controls controlslist="nodownload" src="data/upper__FMH.20243Q_interact@20_chintsuu@92/2_1.wav" preload="metadata"></audio></td>
+<td style="text-align:center"><audio controls controlslist="nodownload" src="data/proposed__FMH.20243Q_interact@20_chintsuu@92-1/3_1.wav" preload="metadata"></audio></td>
+</tr>
+</tbody>
+</table>
+<h4 id="direction-cycle2-1">Direction-cycle2</h4>
+<p>Direction: 今度は、感情が内にこもるように、声のトーンを低めにしてみてください。声にもっと沈み込むような深さを持たせ、最後の音が消えるようにふわっと終わるように意識しましょう。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Actor-Guided(oracle)</th>
+<th style="text-align:center">Iterative-ours(ours)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><audio controls controlslist="nodownload" src="data/upper__FMH.20243Q_interact@20_chintsuu@92/2_2.wav" preload="metadata"></audio></td>
+<td style="text-align:center"><audio controls controlslist="nodownload" src="data/proposed__FMH.20243Q_interact@20_chintsuu@92-1/3_2.wav" preload="metadata"></audio></td>
+</tr>
+</tbody>
+</table>
+<h3 id="fmh20243q_interact24_zannen3">FMH.20243Q_interact@24_zannen@3</h3>
+<h4 id="direction-cycle1-2">Direction-cycle1</h4>
+<p>Direction: もう少しテンションを抑えながら、声を小さくしてつぶやくように話してみてください。残念な気持ちを内に秘める感じを、声のトーンを低めにして表現しましょう。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Actor-Guided(oracle)</th>
+<th style="text-align:center">Iterative-ours(ours)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><audio controls controlslist="nodownload" src="data/upper__FMH.20243Q_interact@24_zannen@3/2_1.wav" preload="metadata"></audio></td>
+<td style="text-align:center"><audio controls controlslist="nodownload" src="data/proposed__FMH.20243Q_interact@24_zannen@3-1/3_1.wav" preload="metadata"></audio></td>
+</tr>
+</tbody>
+</table>
+<h4 id="direction-cycle2-2">Direction-cycle2</h4>
+<p>Direction: 最初の音を少し詰まらせるように、一瞬ためらいを持ってから言葉を出してください。感情がこみ上げてきて、言葉が少し出づらい感じを声の息遣いで表現してみましょう。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Actor-Guided(oracle)</th>
+<th style="text-align:center">Iterative-ours(ours)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><audio controls controlslist="nodownload" src="data/upper__FMH.20243Q_interact@24_zannen@3/2_2.wav" preload="metadata"></audio></td>
+<td style="text-align:center"><audio controls controlslist="nodownload" src="data/proposed__FMH.20243Q_interact@24_zannen@3-1/3_2.wav" preload="metadata"></audio></td>
+</tr>
+</tbody>
+</table>
+<h3 id="fmh20243q_interact28_genki147">FMH.20243Q_interact@28_genki@147</h3>
+<h4 id="direction-cycle1-3">Direction-cycle1</h4>
+<p>Direction: 声にもう少し明るさを加えて、語尾を少し軽やかに上げてみましょう。そうすると、元気さがより伝わりやすくなります。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Actor-Guided(oracle)</th>
+<th style="text-align:center">Iterative-ours(ours)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><audio controls controlslist="nodownload" src="data/upper__FMH.20243Q_interact@28_genki@147/2_1.wav" preload="metadata"></audio></td>
+<td style="text-align:center"><audio controls controlslist="nodownload" src="data/proposed__FMH.20243Q_interact@28_genki@147-1/2_1.wav" preload="metadata"></audio></td>
+</tr>
+</tbody>
+</table>
+<h4 id="direction-cycle2-3">Direction-cycle2</h4>
+<p>Direction: もう少しテンポを速めにしてみてください。全体的に流れが軽快になると、ハツラツとした印象が強まります。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Actor-Guided(oracle)</th>
+<th style="text-align:center">Iterative-ours(ours)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><audio controls controlslist="nodownload" src="data/upper__FMH.20243Q_interact@28_genki@147/2_2.wav" preload="metadata"></audio></td>
+<td style="text-align:center"><audio controls controlslist="nodownload" src="data/proposed__FMH.20243Q_interact@28_genki@147-1/2_2.wav" preload="metadata"></audio></td>
+</tr>
+</tbody>
+</table>
+<h3 id="fmh20243q_interact34_urotaeta196">FMH.20243Q_interact@34_urotaeta@196</h3>
+<h4 id="direction-cycle1-4">Direction-cycle1</h4>
+<p>Direction: 声を少しだけ高めに、でも速さは変えずに。慌てている感じをもう少し強く出してみてください。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Actor-Guided(oracle)</th>
+<th style="text-align:center">Iterative-ours(ours)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><audio controls controlslist="nodownload" src="data/upper__FMH.20243Q_interact@34_urotaeta@196/7_1.wav" preload="metadata"></audio></td>
+<td style="text-align:center"><audio controls controlslist="nodownload" src="data/proposed__FMH.20243Q_interact@34_urotaeta@196-1/8_1.wav" preload="metadata"></audio></td>
+</tr>
+</tbody>
+</table>
+<h4 id="direction-cycle2-4">Direction-cycle2</h4>
+<p>Direction: 最後に息を少し詰まらせて、言葉を飲み込むように。もっと切羽詰まった感じに聞こえるようにしましょう。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Actor-Guided(oracle)</th>
+<th style="text-align:center">Iterative-ours(ours)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><audio controls controlslist="nodownload" src="data/upper__FMH.20243Q_interact@34_urotaeta@196/7_2.wav" preload="metadata"></audio></td>
+<td style="text-align:center"><audio controls controlslist="nodownload" src="data/proposed__FMH.20243Q_interact@34_urotaeta@196-1/8_2.wav" preload="metadata"></audio></td>
+</tr>
+</tbody>
+</table>
+<h4 id="direction-cycle3-1">Direction-cycle3</h4>
+<p>Direction: 全体的にリズムを少し崩して、言葉が流れすぎないように。緊張して言葉に詰まりやすいイメージで発声してください。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Actor-Guided(oracle)</th>
+<th style="text-align:center">Iterative-ours(ours)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><audio controls controlslist="nodownload" src="data/upper__FMH.20243Q_interact@34_urotaeta@196/7_3.wav" preload="metadata"></audio></td>
+<td style="text-align:center"><audio controls controlslist="nodownload" src="data/proposed__FMH.20243Q_interact@34_urotaeta@196-1/8_3.wav" preload="metadata"></audio></td>
+</tr>
+</tbody>
+</table>
+<h3 id="fmh20243q_interact48_iroppoku163">FMH.20243Q_interact@48_iroppoku@163</h3>
+<h4 id="direction-cycle1-5">Direction-cycle1</h4>
+<p>Direction: 声を少し低めにし、少しゆっくり話すことで、落ち着いた色っぽさを出してみてください。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Actor-Guided(oracle)</th>
+<th style="text-align:center">Iterative-ours(ours)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><audio controls controlslist="nodownload" src="data/upper__FMH.20243Q_interact@48_iroppoku@163/7_1.wav" preload="metadata"></audio></td>
+<td style="text-align:center"><audio controls controlslist="nodownload" src="data/proposed__FMH.20243Q_interact@48_iroppoku@163-1/7_1.wav" preload="metadata"></audio></td>
+</tr>
+</tbody>
+</table>
+<h4 id="direction-cycle2-5">Direction-cycle2</h4>
+<p>Direction: 息を含んだ柔らかい口調で、抑えめな音量にしてみてください。特に語尾はやさしく伸ばすように意識してください。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Actor-Guided(oracle)</th>
+<th style="text-align:center">Iterative-ours(ours)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><audio controls controlslist="nodownload" src="data/upper__FMH.20243Q_interact@48_iroppoku@163/7_2.wav" preload="metadata"></audio></td>
+<td style="text-align:center"><audio controls controlslist="nodownload" src="data/proposed__FMH.20243Q_interact@48_iroppoku@163-1/7_2.wav" preload="metadata"></audio></td>
+</tr>
+</tbody>
+</table>
+<h4 id="direction-cycle3-2">Direction-cycle3</h4>
+<p>Direction: 声に少し余韻を残すように、語りかける感じで全体的にもう少し間をとってみましょう。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Actor-Guided(oracle)</th>
+<th style="text-align:center">Iterative-ours(ours)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><audio controls controlslist="nodownload" src="data/upper__FMH.20243Q_interact@48_iroppoku@163/7_3.wav" preload="metadata"></audio></td>
+<td style="text-align:center"><audio controls controlslist="nodownload" src="data/proposed__FMH.20243Q_interact@48_iroppoku@163-1/7_3.wav" preload="metadata"></audio></td>
+</tr>
+</tbody>
+</table>
+<h3 id="mde20243q_interact02_yorokonde1">MDE.20243Q_interact@02_yorokonde@1</h3>
+<h4 id="direction-cycle1-6">Direction-cycle1</h4>
+<p>Direction: 全体のトーンを少し低めにして、声に安定感を出してください。父親としての落ち着いた喜びを表現するためです。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Actor-Guided(oracle)</th>
+<th style="text-align:center">Iterative-ours(ours)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><audio controls controlslist="nodownload" src="data/upper__MDE.20243Q_interact@02_yorokonde@1/9_1.wav" preload="metadata"></audio></td>
+<td style="text-align:center"><audio controls controlslist="nodownload" src="data/proposed__MDE.20243Q_interact@02_yorokonde@1-1/10_1.wav" preload="metadata"></audio></td>
+</tr>
+</tbody>
+</table>
+<h4 id="direction-cycle2-6">Direction-cycle2</h4>
+<p>Direction: もう少し明瞭に発音してください。特に各言葉の区切りをはっきりさせ、声に自信を感じさせるようにしましょう。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Actor-Guided(oracle)</th>
+<th style="text-align:center">Iterative-ours(ours)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><audio controls controlslist="nodownload" src="data/upper__MDE.20243Q_interact@02_yorokonde@1/9_2.wav" preload="metadata"></audio></td>
+<td style="text-align:center"><audio controls controlslist="nodownload" src="data/proposed__MDE.20243Q_interact@02_yorokonde@1-1/10_2.wav" preload="metadata"></audio></td>
+</tr>
+</tbody>
+</table>
+<h4 id="direction-cycle3-3">Direction-cycle3</h4>
+<p>Direction: 喜びをもう少し抑え気味に、笑い声が混ざらない程度に喜びの余韻を残しつつ話してください。喜びが内に秘められている感じを表現します。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Actor-Guided(oracle)</th>
+<th style="text-align:center">Iterative-ours(ours)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><audio controls controlslist="nodownload" src="data/upper__MDE.20243Q_interact@02_yorokonde@1/9_3.wav" preload="metadata"></audio></td>
+<td style="text-align:center"><audio controls controlslist="nodownload" src="data/proposed__MDE.20243Q_interact@02_yorokonde@1-1/10_3.wav" preload="metadata"></audio></td>
+</tr>
+</tbody>
+</table>
+<h3 id="mde20243q_interact12_iyami5">MDE.20243Q_interact@12_iyami@5</h3>
+<h4 id="direction-cycle1-7">Direction-cycle1</h4>
+<p>Direction: 声の高さをほんの少し低くして、少し落ち着いたトーンで話してください。全体として、冷静に言い放つようなニュアンスに近づけましょう。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Actor-Guided(oracle)</th>
+<th style="text-align:center">Iterative-ours(ours)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><audio controls controlslist="nodownload" src="data/upper__MDE.20243Q_interact@12_iyami@5/9_1.wav" preload="metadata"></audio></td>
+<td style="text-align:center"><audio controls controlslist="nodownload" src="data/proposed__MDE.20243Q_interact@12_iyami@5-1/10_1.wav" preload="metadata"></audio></td>
+</tr>
+</tbody>
+</table>
+<h4 id="direction-cycle2-7">Direction-cycle2</h4>
+<p>Direction: 各語句の最後をはっきりと切るようにして、言葉に一貫性を持たせてください。特に、語尾が曖昧にならないように気をつけてください。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Actor-Guided(oracle)</th>
+<th style="text-align:center">Iterative-ours(ours)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><audio controls controlslist="nodownload" src="data/upper__MDE.20243Q_interact@12_iyami@5/9_2.wav" preload="metadata"></audio></td>
+<td style="text-align:center"><audio controls controlslist="nodownload" src="data/proposed__MDE.20243Q_interact@12_iyami@5-1/10_2.wav" preload="metadata"></audio></td>
+</tr>
+</tbody>
+</table>
+<h4 id="direction-cycle3-4">Direction-cycle3</h4>
+<p>Direction: 速度をややゆっくりにして、一言一言をしっかりと重みを持たせるように発話してください。全体として、強調する部分が均等になるように調整しましょう。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Actor-Guided(oracle)</th>
+<th style="text-align:center">Iterative-ours(ours)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><audio controls controlslist="nodownload" src="data/upper__MDE.20243Q_interact@12_iyami@5/9_3.wav" preload="metadata"></audio></td>
+<td style="text-align:center"><audio controls controlslist="nodownload" src="data/proposed__MDE.20243Q_interact@12_iyami@5-1/10_3.wav" preload="metadata"></audio></td>
+</tr>
+</tbody>
+</table>
+<h3 id="mde20243q_interact13_akireta11">MDE.20243Q_interact@13_akireta@11</h3>
+<h4 id="direction-cycle1-8">Direction-cycle1</h4>
+<p>Direction: 声のトーンをやや低く抑えながら、一度息を吐くように、少し疲れたような響きを加えてください。これにより、呆れた感じがより強調されます。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Actor-Guided(oracle)</th>
+<th style="text-align:center">Iterative-ours(ours)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><audio controls controlslist="nodownload" src="data/upper__MDE.20243Q_interact@13_akireta@11/10_1.wav" preload="metadata"></audio></td>
+<td style="text-align:center"><audio controls controlslist="nodownload" src="data/proposed__MDE.20243Q_interact@13_akireta@11-1/10_1.wav" preload="metadata"></audio></td>
+</tr>
+</tbody>
+</table>
+<h4 id="direction-cycle2-8">Direction-cycle2</h4>
+<p>Direction: セリフ全体を少しゆっくりと発話してください。ただし、語尾を自然に切ることで、無理に引き延ばさず、呆れた表現を維持してください。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Actor-Guided(oracle)</th>
+<th style="text-align:center">Iterative-ours(ours)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><audio controls controlslist="nodownload" src="data/upper__MDE.20243Q_interact@13_akireta@11/10_2.wav" preload="metadata"></audio></td>
+<td style="text-align:center"><audio controls controlslist="nodownload" src="data/proposed__MDE.20243Q_interact@13_akireta@11-1/10_2.wav" preload="metadata"></audio></td>
+</tr>
+</tbody>
+</table>
+<h4 id="direction-cycle3-5">Direction-cycle3</h4>
+<p>Direction: 声のボリュームを一段階下げてください。まるで相手に言っても意味がないと思っているかのように、少し控えめに発話することで、呆れた感情をより表現してください。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Actor-Guided(oracle)</th>
+<th style="text-align:center">Iterative-ours(ours)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><audio controls controlslist="nodownload" src="data/upper__MDE.20243Q_interact@13_akireta@11/10_3.wav" preload="metadata"></audio></td>
+<td style="text-align:center"><audio controls controlslist="nodownload" src="data/proposed__MDE.20243Q_interact@13_akireta@11-1/10_3.wav" preload="metadata"></audio></td>
+</tr>
+</tbody>
+</table>
+<h3 id="mde20243q_interact25_dokidoki5">MDE.20243Q_interact@25_dokidoki@5</h3>
+<h4 id="direction-cycle1-9">Direction-cycle1</h4>
+<p>Direction: 文の始まりから終わりにかけて、声を少しずつ上げていってください。高揚感を出すために、最後の単語を一番高めの声で終えてください。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Actor-Guided(oracle)</th>
+<th style="text-align:center">Iterative-ours(ours)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><audio controls controlslist="nodownload" src="data/upper__MDE.20243Q_interact@25_dokidoki@5/9_1.wav" preload="metadata"></audio></td>
+<td style="text-align:center"><audio controls controlslist="nodownload" src="data/proposed__MDE.20243Q_interact@25_dokidoki@5-1/9_1.wav" preload="metadata"></audio></td>
+</tr>
+</tbody>
+</table>
+<h4 id="direction-cycle2-9">Direction-cycle2</h4>
+<p>Direction: 発話の最初で少し息を吸い込むようにして、少し息苦しい感じを演出してください。これによって、興奮した感じが強調されます。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Actor-Guided(oracle)</th>
+<th style="text-align:center">Iterative-ours(ours)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><audio controls controlslist="nodownload" src="data/upper__MDE.20243Q_interact@25_dokidoki@5/9_2.wav" preload="metadata"></audio></td>
+<td style="text-align:center"><audio controls controlslist="nodownload" src="data/proposed__MDE.20243Q_interact@25_dokidoki@5-1/9_2.wav" preload="metadata"></audio></td>
+</tr>
+</tbody>
+</table>
+<h4 id="direction-cycle3-6">Direction-cycle3</h4>
+<p>Direction: 発話速度を全体的に速めてみてください。特に、後半の部分は少し急ぎながら話すことで、見つけた時の喜びを強調します。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Actor-Guided(oracle)</th>
+<th style="text-align:center">Iterative-ours(ours)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><audio controls controlslist="nodownload" src="data/upper__MDE.20243Q_interact@25_dokidoki@5/9_3.wav" preload="metadata"></audio></td>
+<td style="text-align:center"><audio controls controlslist="nodownload" src="data/proposed__MDE.20243Q_interact@25_dokidoki@5-1/9_3.wav" preload="metadata"></audio></td>
+</tr>
+</tbody>
+</table>
+<h3 id="mde20243q_interact27_asette9">MDE.20243Q_interact@27_asette@9</h3>
+<h4 id="direction-cycle1-10">Direction-cycle1</h4>
+<p>Direction: 声をもう少し早めにして、言葉が途切れることなく滑らかに発話してください。焦っている感じを出すため、息を一気に吐き出すように発声してください。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Actor-Guided(oracle)</th>
+<th style="text-align:center">Iterative-ours(ours)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><audio controls controlslist="nodownload" src="data/upper__MDE.20243Q_interact@27_asette@9/5_1.wav" preload="metadata"></audio></td>
+<td style="text-align:center"><audio controls controlslist="nodownload" src="data/proposed__MDE.20243Q_interact@27_asette@9-1/4_1.wav" preload="metadata"></audio></td>
+</tr>
+</tbody>
+</table>
+<h4 id="direction-cycle2-10">Direction-cycle2</h4>
+<p>Direction: 音量を少し上げて、声の強さを強調してください。急いでいるがしっかり伝えたいという感じを出すために、腹式呼吸を意識して響きを強めにしてください。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Actor-Guided(oracle)</th>
+<th style="text-align:center">Iterative-ours(ours)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><audio controls controlslist="nodownload" src="data/upper__MDE.20243Q_interact@27_asette@9/5_2.wav" preload="metadata"></audio></td>
+<td style="text-align:center"><audio controls controlslist="nodownload" src="data/proposed__MDE.20243Q_interact@27_asette@9-1/4_2.wav" preload="metadata"></audio></td>
+</tr>
+</tbody>
+</table>
+<h3 id="mde20243q_interact43_kibou1">MDE.20243Q_interact@43_kibou@1</h3>
+<h4 id="direction-cycle1-11">Direction-cycle1</h4>
+<p>Direction: 声のトーンをもう少し落ち着いた低めに調整してください。少し冷静さを感じさせるように、ゆっくりとしたペースで発声してください。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Actor-Guided(oracle)</th>
+<th style="text-align:center">Iterative-ours(ours)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><audio controls controlslist="nodownload" src="data/upper__MDE.20243Q_interact@43_kibou@1/10_1.wav" preload="metadata"></audio></td>
+<td style="text-align:center"><audio controls controlslist="nodownload" src="data/proposed__MDE.20243Q_interact@43_kibou@1-1/10_1.wav" preload="metadata"></audio></td>
+</tr>
+</tbody>
+</table>
+<h4 id="direction-cycle2-11">Direction-cycle2</h4>
+<p>Direction: 言葉の終わりをしっかりと響かせるように、特に文末の声を少し伸ばして強調してください。ただし、強すぎず自然に聞こえるように意識しましょう。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Actor-Guided(oracle)</th>
+<th style="text-align:center">Iterative-ours(ours)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><audio controls controlslist="nodownload" src="data/upper__MDE.20243Q_interact@43_kibou@1/10_2.wav" preload="metadata"></audio></td>
+<td style="text-align:center"><audio controls controlslist="nodownload" src="data/proposed__MDE.20243Q_interact@43_kibou@1-1/10_2.wav" preload="metadata"></audio></td>
+</tr>
+</tbody>
+</table>
+<h4 id="direction-cycle3-7">Direction-cycle3</h4>
+<p>Direction: 全体のテンポを少しだけゆっくりにして、落ち着きが感じられるようにしてください。リラックスした雰囲気を保ちながら、間を大事にしてください。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Actor-Guided(oracle)</th>
+<th style="text-align:center">Iterative-ours(ours)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><audio controls controlslist="nodownload" src="data/upper__MDE.20243Q_interact@43_kibou@1/10_3.wav" preload="metadata"></audio></td>
+<td style="text-align:center"><audio controls controlslist="nodownload" src="data/proposed__MDE.20243Q_interact@43_kibou@1-1/10_3.wav" preload="metadata"></audio></td>
+</tr>
+</tbody>
+</table>
+<h2 id="performance-of-the-proposed-method-according-to-the-direction-difficulty">Performance of the proposed method according to the direction difficulty</h2>
+<h3 id="easy-case">Easy case</h3>
+<p>Direction: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Speech prompt</th>
+<th style="text-align:center">Refined</th>
+<th style="text-align:center">Refined (recorded)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><audio controls controlslist="nodownload" src="./data/1.wav" preload="metadata"></audio></td>
+<td style="text-align:center"><audio controls controlslist="nodownload" src="./data/1.wav" preload="metadata"></audio></td>
+<td style="text-align:center"><audio controls controlslist="nodownload" src="./data/1.wav" preload="metadata"></audio></td>
+</tr>
+</tbody>
+</table>
+<h3 id="difficult-case">Difficult case</h3>
+
+        
+        
+    </body>
+    </html>
