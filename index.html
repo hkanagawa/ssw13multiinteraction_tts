@@ -2,8 +2,13 @@
     <html>
     <head>
         <meta charset="UTF-8">
-        <title>Demo site of Multi-interaction TTS toward professional recording reproduction</title>
+        <title>Multi-interaction TTS toward professional recording reproduction</title>
         <style>
+/* From extension vscode.github */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
 
 .vscode-dark img[src$=\#gh-light-mode-only],
 .vscode-light img[src$=\#gh-dark-mode-only] {
@@ -129,17 +134,17 @@ The following table provides a clear understanding of I/O for the both comparati
 </ul>
 <h2 id="comparison-on-iterative-style-refinement">Comparison on iterative style refinement</h2>
 <h3 id="fmh20243q_interact10_tsukareta117">FMH.20243Q_interact@10_tsukareta@117</h3>
-<p><strong>Recorded-0</strong>  <audio controls controlslist="nodownload" src="./data/orgwav/FMH.20243Q_interact@10_tsukareta@117-0.wav" preload="metadata"></audio></p>
-<h4 id="direction-cycle1"><strong>Direction-cycle1</strong></h4>
-<p><strong>Direction:</strong> 少し息を吐くように始めてください。疲れた感じが伝わるように、発話の冒頭で声に少し息を混ぜて、声量を抑えて話しましょう。</p>
+<p><strong>Recorded-0</strong> (Audio before being refined)<br>
+<audio controls controlslist="nodownload" src="./data/orgwav/FMH.20243Q_interact@10_tsukareta@117-0.wav" preload="metadata"></audio></p>
+<p><strong>Direction-cycle1</strong>: 少し息を吐くように始めてください。疲れた感じが伝わるように、発話の冒頭で声に少し息を混ぜて、声量を抑えて話しましょう。</p>
 <table>
 <thead>
 <tr>
-<th style="text-align:center">Recorded(1)</th>
-<th style="text-align:center">Actor-Guided(0)</th>
-<th style="text-align:center">Actor-Guided(1)</th>
-<th style="text-align:center">Iterative(0)</th>
-<th style="text-align:center">Iterative(1)</th>
+<th style="text-align:center">Recorded-1</th>
+<th style="text-align:center">Guided-0</th>
+<th style="text-align:center">Guided-1</th>
+<th style="text-align:center">Iterative-0</th>
+<th style="text-align:center">Iterative-1</th>
 </tr>
 </thead>
 <tbody>
@@ -152,16 +157,16 @@ The following table provides a clear understanding of I/O for the both comparati
 </tr>
 </tbody>
 </table>
-<h4 id="direction-cycle2"><strong>Direction-cycle2</strong></h4>
-<p><strong>Direction:</strong> テンポをもう少しゆっくりにしましょう。言葉の間に少し間を置いて、話すテンポを落とすことで、疲れが声に表れるようにしましょう。</p>
+<hr>
+<p><strong>Direction-cycle2</strong>: テンポをもう少しゆっくりにしましょう。言葉の間に少し間を置いて、話すテンポを落とすことで、疲れが声に表れるようにしましょう。</p>
 <table>
 <thead>
 <tr>
-<th style="text-align:center">Recorded(2)</th>
-<th style="text-align:center">Actor-Guided(1)</th>
-<th style="text-align:center">Actor-Guided(2)</th>
-<th style="text-align:center">Iterative(1)</th>
-<th style="text-align:center">Iterative(2)</th>
+<th style="text-align:center">Recorded-2</th>
+<th style="text-align:center">Guided-1</th>
+<th style="text-align:center">Guided-2</th>
+<th style="text-align:center">Iterative-1</th>
+<th style="text-align:center">Iterative-2</th>
 </tr>
 </thead>
 <tbody>
@@ -174,16 +179,16 @@ The following table provides a clear understanding of I/O for the both comparati
 </tr>
 </tbody>
 </table>
-<h4 id="direction-cycle3"><strong>Direction-cycle3</strong></h4>
-<p><strong>Direction:</strong> 語尾を落としましょう。フレーズの最後を弱くし、少し力が抜けたような感じで話してみてください。</p>
+<hr>
+<p><strong>Direction-cycle3</strong>: 語尾を落としましょう。フレーズの最後を弱くし、少し力が抜けたような感じで話してみてください。</p>
 <table>
 <thead>
 <tr>
-<th style="text-align:center">Recorded(3)</th>
-<th style="text-align:center">Actor-Guided(2)</th>
-<th style="text-align:center">Actor-Guided(3)</th>
-<th style="text-align:center">Iterative(2)</th>
-<th style="text-align:center">Iterative(3)</th>
+<th style="text-align:center">Recorded-3</th>
+<th style="text-align:center">Guided-2</th>
+<th style="text-align:center">Guided-3</th>
+<th style="text-align:center">Iterative-2</th>
+<th style="text-align:center">Iterative-3</th>
 </tr>
 </thead>
 <tbody>
@@ -196,18 +201,19 @@ The following table provides a clear understanding of I/O for the both comparati
 </tr>
 </tbody>
 </table>
+<hr>
 <h3 id="fmh20243q_interact20_chintsuu92">FMH.20243Q_interact@20_chintsuu@92</h3>
-<p><strong>Recorded-0</strong>  <audio controls controlslist="nodownload" src="./data/orgwav/FMH.20243Q_interact@20_chintsuu@92-0.wav" preload="metadata"></audio></p>
-<h4 id="direction-cycle1-1"><strong>Direction-cycle1</strong></h4>
-<p><strong>Direction:</strong> 少し言葉に力を入れすぎている感じがあるので、もう少し声のボリュームを落として、疲れたような、少し途切れがちな息遣いを意識してみましょう。特に最初の部分で、声を詰まらせるような感覚で始めてください。</p>
+<p><strong>Recorded-0</strong> (Audio before being refined)<br>
+<audio controls controlslist="nodownload" src="./data/orgwav/FMH.20243Q_interact@20_chintsuu@92-0.wav" preload="metadata"></audio></p>
+<p><strong>Direction-cycle1</strong>: 少し言葉に力を入れすぎている感じがあるので、もう少し声のボリュームを落として、疲れたような、少し途切れがちな息遣いを意識してみましょう。特に最初の部分で、声を詰まらせるような感覚で始めてください。</p>
 <table>
 <thead>
 <tr>
-<th style="text-align:center">Recorded(1)</th>
-<th style="text-align:center">Actor-Guided(0)</th>
-<th style="text-align:center">Actor-Guided(1)</th>
-<th style="text-align:center">Iterative(0)</th>
-<th style="text-align:center">Iterative(1)</th>
+<th style="text-align:center">Recorded-1</th>
+<th style="text-align:center">Guided-0</th>
+<th style="text-align:center">Guided-1</th>
+<th style="text-align:center">Iterative-0</th>
+<th style="text-align:center">Iterative-1</th>
 </tr>
 </thead>
 <tbody>
@@ -220,16 +226,16 @@ The following table provides a clear understanding of I/O for the both comparati
 </tr>
 </tbody>
 </table>
-<h4 id="direction-cycle2-1"><strong>Direction-cycle2</strong></h4>
-<p><strong>Direction:</strong> 今度は、感情が内にこもるように、声のトーンを低めにしてみてください。声にもっと沈み込むような深さを持たせ、最後の音が消えるようにふわっと終わるように意識しましょう。</p>
+<hr>
+<p><strong>Direction-cycle2</strong>: 今度は、感情が内にこもるように、声のトーンを低めにしてみてください。声にもっと沈み込むような深さを持たせ、最後の音が消えるようにふわっと終わるように意識しましょう。</p>
 <table>
 <thead>
 <tr>
-<th style="text-align:center">Recorded(2)</th>
-<th style="text-align:center">Actor-Guided(1)</th>
-<th style="text-align:center">Actor-Guided(2)</th>
-<th style="text-align:center">Iterative(1)</th>
-<th style="text-align:center">Iterative(2)</th>
+<th style="text-align:center">Recorded-2</th>
+<th style="text-align:center">Guided-1</th>
+<th style="text-align:center">Guided-2</th>
+<th style="text-align:center">Iterative-1</th>
+<th style="text-align:center">Iterative-2</th>
 </tr>
 </thead>
 <tbody>
@@ -242,18 +248,19 @@ The following table provides a clear understanding of I/O for the both comparati
 </tr>
 </tbody>
 </table>
+<hr>
 <h3 id="fmh20243q_interact24_zannen3">FMH.20243Q_interact@24_zannen@3</h3>
-<p><strong>Recorded-0</strong>  <audio controls controlslist="nodownload" src="./data/orgwav/FMH.20243Q_interact@24_zannen@3-0.wav" preload="metadata"></audio></p>
-<h4 id="direction-cycle1-2"><strong>Direction-cycle1</strong></h4>
-<p><strong>Direction:</strong> もう少しテンションを抑えながら、声を小さくしてつぶやくように話してみてください。残念な気持ちを内に秘める感じを、声のトーンを低めにして表現しましょう。</p>
+<p><strong>Recorded-0</strong> (Audio before being refined)<br>
+<audio controls controlslist="nodownload" src="./data/orgwav/FMH.20243Q_interact@24_zannen@3-0.wav" preload="metadata"></audio></p>
+<p><strong>Direction-cycle1</strong>: もう少しテンションを抑えながら、声を小さくしてつぶやくように話してみてください。残念な気持ちを内に秘める感じを、声のトーンを低めにして表現しましょう。</p>
 <table>
 <thead>
 <tr>
-<th style="text-align:center">Recorded(1)</th>
-<th style="text-align:center">Actor-Guided(0)</th>
-<th style="text-align:center">Actor-Guided(1)</th>
-<th style="text-align:center">Iterative(0)</th>
-<th style="text-align:center">Iterative(1)</th>
+<th style="text-align:center">Recorded-1</th>
+<th style="text-align:center">Guided-0</th>
+<th style="text-align:center">Guided-1</th>
+<th style="text-align:center">Iterative-0</th>
+<th style="text-align:center">Iterative-1</th>
 </tr>
 </thead>
 <tbody>
@@ -266,16 +273,16 @@ The following table provides a clear understanding of I/O for the both comparati
 </tr>
 </tbody>
 </table>
-<h4 id="direction-cycle2-2"><strong>Direction-cycle2</strong></h4>
-<p><strong>Direction:</strong> 最初の音を少し詰まらせるように、一瞬ためらいを持ってから言葉を出してください。感情がこみ上げてきて、言葉が少し出づらい感じを声の息遣いで表現してみましょう。</p>
+<hr>
+<p><strong>Direction-cycle2</strong>: 最初の音を少し詰まらせるように、一瞬ためらいを持ってから言葉を出してください。感情がこみ上げてきて、言葉が少し出づらい感じを声の息遣いで表現してみましょう。</p>
 <table>
 <thead>
 <tr>
-<th style="text-align:center">Recorded(2)</th>
-<th style="text-align:center">Actor-Guided(1)</th>
-<th style="text-align:center">Actor-Guided(2)</th>
-<th style="text-align:center">Iterative(1)</th>
-<th style="text-align:center">Iterative(2)</th>
+<th style="text-align:center">Recorded-2</th>
+<th style="text-align:center">Guided-1</th>
+<th style="text-align:center">Guided-2</th>
+<th style="text-align:center">Iterative-1</th>
+<th style="text-align:center">Iterative-2</th>
 </tr>
 </thead>
 <tbody>
@@ -288,18 +295,19 @@ The following table provides a clear understanding of I/O for the both comparati
 </tr>
 </tbody>
 </table>
+<hr>
 <h3 id="fmh20243q_interact28_genki147">FMH.20243Q_interact@28_genki@147</h3>
-<p><strong>Recorded-0</strong>  <audio controls controlslist="nodownload" src="./data/orgwav/FMH.20243Q_interact@28_genki@147-0.wav" preload="metadata"></audio></p>
-<h4 id="direction-cycle1-3"><strong>Direction-cycle1</strong></h4>
-<p><strong>Direction:</strong> 声にもう少し明るさを加えて、語尾を少し軽やかに上げてみましょう。そうすると、元気さがより伝わりやすくなります。</p>
+<p><strong>Recorded-0</strong> (Audio before being refined)<br>
+<audio controls controlslist="nodownload" src="./data/orgwav/FMH.20243Q_interact@28_genki@147-0.wav" preload="metadata"></audio></p>
+<p><strong>Direction-cycle1</strong>: 声にもう少し明るさを加えて、語尾を少し軽やかに上げてみましょう。そうすると、元気さがより伝わりやすくなります。</p>
 <table>
 <thead>
 <tr>
-<th style="text-align:center">Recorded(1)</th>
-<th style="text-align:center">Actor-Guided(0)</th>
-<th style="text-align:center">Actor-Guided(1)</th>
-<th style="text-align:center">Iterative(0)</th>
-<th style="text-align:center">Iterative(1)</th>
+<th style="text-align:center">Recorded-1</th>
+<th style="text-align:center">Guided-0</th>
+<th style="text-align:center">Guided-1</th>
+<th style="text-align:center">Iterative-0</th>
+<th style="text-align:center">Iterative-1</th>
 </tr>
 </thead>
 <tbody>
@@ -312,16 +320,16 @@ The following table provides a clear understanding of I/O for the both comparati
 </tr>
 </tbody>
 </table>
-<h4 id="direction-cycle2-3"><strong>Direction-cycle2</strong></h4>
-<p><strong>Direction:</strong> もう少しテンポを速めにしてみてください。全体的に流れが軽快になると、ハツラツとした印象が強まります。</p>
+<hr>
+<p><strong>Direction-cycle2</strong>: もう少しテンポを速めにしてみてください。全体的に流れが軽快になると、ハツラツとした印象が強まります。</p>
 <table>
 <thead>
 <tr>
-<th style="text-align:center">Recorded(2)</th>
-<th style="text-align:center">Actor-Guided(1)</th>
-<th style="text-align:center">Actor-Guided(2)</th>
-<th style="text-align:center">Iterative(1)</th>
-<th style="text-align:center">Iterative(2)</th>
+<th style="text-align:center">Recorded-2</th>
+<th style="text-align:center">Guided-1</th>
+<th style="text-align:center">Guided-2</th>
+<th style="text-align:center">Iterative-1</th>
+<th style="text-align:center">Iterative-2</th>
 </tr>
 </thead>
 <tbody>
@@ -334,18 +342,19 @@ The following table provides a clear understanding of I/O for the both comparati
 </tr>
 </tbody>
 </table>
+<hr>
 <h3 id="fmh20243q_interact34_urotaeta196">FMH.20243Q_interact@34_urotaeta@196</h3>
-<p><strong>Recorded-0</strong>  <audio controls controlslist="nodownload" src="./data/orgwav/FMH.20243Q_interact@34_urotaeta@196-0.wav" preload="metadata"></audio></p>
-<h4 id="direction-cycle1-4"><strong>Direction-cycle1</strong></h4>
-<p><strong>Direction:</strong> 声を少しだけ高めに、でも速さは変えずに。慌てている感じをもう少し強く出してみてください。</p>
+<p><strong>Recorded-0</strong> (Audio before being refined)<br>
+<audio controls controlslist="nodownload" src="./data/orgwav/FMH.20243Q_interact@34_urotaeta@196-0.wav" preload="metadata"></audio></p>
+<p><strong>Direction-cycle1</strong>: 声を少しだけ高めに、でも速さは変えずに。慌てている感じをもう少し強く出してみてください。</p>
 <table>
 <thead>
 <tr>
-<th style="text-align:center">Recorded(1)</th>
-<th style="text-align:center">Actor-Guided(0)</th>
-<th style="text-align:center">Actor-Guided(1)</th>
-<th style="text-align:center">Iterative(0)</th>
-<th style="text-align:center">Iterative(1)</th>
+<th style="text-align:center">Recorded-1</th>
+<th style="text-align:center">Guided-0</th>
+<th style="text-align:center">Guided-1</th>
+<th style="text-align:center">Iterative-0</th>
+<th style="text-align:center">Iterative-1</th>
 </tr>
 </thead>
 <tbody>
@@ -358,16 +367,16 @@ The following table provides a clear understanding of I/O for the both comparati
 </tr>
 </tbody>
 </table>
-<h4 id="direction-cycle2-4"><strong>Direction-cycle2</strong></h4>
-<p><strong>Direction:</strong> 最後に息を少し詰まらせて、言葉を飲み込むように。もっと切羽詰まった感じに聞こえるようにしましょう。</p>
+<hr>
+<p><strong>Direction-cycle2</strong>: 最後に息を少し詰まらせて、言葉を飲み込むように。もっと切羽詰まった感じに聞こえるようにしましょう。</p>
 <table>
 <thead>
 <tr>
-<th style="text-align:center">Recorded(2)</th>
-<th style="text-align:center">Actor-Guided(1)</th>
-<th style="text-align:center">Actor-Guided(2)</th>
-<th style="text-align:center">Iterative(1)</th>
-<th style="text-align:center">Iterative(2)</th>
+<th style="text-align:center">Recorded-2</th>
+<th style="text-align:center">Guided-1</th>
+<th style="text-align:center">Guided-2</th>
+<th style="text-align:center">Iterative-1</th>
+<th style="text-align:center">Iterative-2</th>
 </tr>
 </thead>
 <tbody>
@@ -380,16 +389,16 @@ The following table provides a clear understanding of I/O for the both comparati
 </tr>
 </tbody>
 </table>
-<h4 id="direction-cycle3-1"><strong>Direction-cycle3</strong></h4>
-<p><strong>Direction:</strong> 全体的にリズムを少し崩して、言葉が流れすぎないように。緊張して言葉に詰まりやすいイメージで発声してください。</p>
+<hr>
+<p><strong>Direction-cycle3</strong>: 全体的にリズムを少し崩して、言葉が流れすぎないように。緊張して言葉に詰まりやすいイメージで発声してください。</p>
 <table>
 <thead>
 <tr>
-<th style="text-align:center">Recorded(3)</th>
-<th style="text-align:center">Actor-Guided(2)</th>
-<th style="text-align:center">Actor-Guided(3)</th>
-<th style="text-align:center">Iterative(2)</th>
-<th style="text-align:center">Iterative(3)</th>
+<th style="text-align:center">Recorded-3</th>
+<th style="text-align:center">Guided-2</th>
+<th style="text-align:center">Guided-3</th>
+<th style="text-align:center">Iterative-2</th>
+<th style="text-align:center">Iterative-3</th>
 </tr>
 </thead>
 <tbody>
@@ -402,18 +411,19 @@ The following table provides a clear understanding of I/O for the both comparati
 </tr>
 </tbody>
 </table>
+<hr>
 <h3 id="fmh20243q_interact48_iroppoku163">FMH.20243Q_interact@48_iroppoku@163</h3>
-<p><strong>Recorded-0</strong>  <audio controls controlslist="nodownload" src="./data/orgwav/FMH.20243Q_interact@48_iroppoku@163-0.wav" preload="metadata"></audio></p>
-<h4 id="direction-cycle1-5"><strong>Direction-cycle1</strong></h4>
-<p><strong>Direction:</strong> 声を少し低めにし、少しゆっくり話すことで、落ち着いた色っぽさを出してみてください。</p>
+<p><strong>Recorded-0</strong> (Audio before being refined)<br>
+<audio controls controlslist="nodownload" src="./data/orgwav/FMH.20243Q_interact@48_iroppoku@163-0.wav" preload="metadata"></audio></p>
+<p><strong>Direction-cycle1</strong>: 声を少し低めにし、少しゆっくり話すことで、落ち着いた色っぽさを出してみてください。</p>
 <table>
 <thead>
 <tr>
-<th style="text-align:center">Recorded(1)</th>
-<th style="text-align:center">Actor-Guided(0)</th>
-<th style="text-align:center">Actor-Guided(1)</th>
-<th style="text-align:center">Iterative(0)</th>
-<th style="text-align:center">Iterative(1)</th>
+<th style="text-align:center">Recorded-1</th>
+<th style="text-align:center">Guided-0</th>
+<th style="text-align:center">Guided-1</th>
+<th style="text-align:center">Iterative-0</th>
+<th style="text-align:center">Iterative-1</th>
 </tr>
 </thead>
 <tbody>
@@ -426,16 +436,16 @@ The following table provides a clear understanding of I/O for the both comparati
 </tr>
 </tbody>
 </table>
-<h4 id="direction-cycle2-5"><strong>Direction-cycle2</strong></h4>
-<p><strong>Direction:</strong> 息を含んだ柔らかい口調で、抑えめな音量にしてみてください。特に語尾はやさしく伸ばすように意識してください。</p>
+<hr>
+<p><strong>Direction-cycle2</strong>: 息を含んだ柔らかい口調で、抑えめな音量にしてみてください。特に語尾はやさしく伸ばすように意識してください。</p>
 <table>
 <thead>
 <tr>
-<th style="text-align:center">Recorded(2)</th>
-<th style="text-align:center">Actor-Guided(1)</th>
-<th style="text-align:center">Actor-Guided(2)</th>
-<th style="text-align:center">Iterative(1)</th>
-<th style="text-align:center">Iterative(2)</th>
+<th style="text-align:center">Recorded-2</th>
+<th style="text-align:center">Guided-1</th>
+<th style="text-align:center">Guided-2</th>
+<th style="text-align:center">Iterative-1</th>
+<th style="text-align:center">Iterative-2</th>
 </tr>
 </thead>
 <tbody>
@@ -448,16 +458,16 @@ The following table provides a clear understanding of I/O for the both comparati
 </tr>
 </tbody>
 </table>
-<h4 id="direction-cycle3-2"><strong>Direction-cycle3</strong></h4>
-<p><strong>Direction:</strong> 声に少し余韻を残すように、語りかける感じで全体的にもう少し間をとってみましょう。</p>
+<hr>
+<p><strong>Direction-cycle3</strong>: 声に少し余韻を残すように、語りかける感じで全体的にもう少し間をとってみましょう。</p>
 <table>
 <thead>
 <tr>
-<th style="text-align:center">Recorded(3)</th>
-<th style="text-align:center">Actor-Guided(2)</th>
-<th style="text-align:center">Actor-Guided(3)</th>
-<th style="text-align:center">Iterative(2)</th>
-<th style="text-align:center">Iterative(3)</th>
+<th style="text-align:center">Recorded-3</th>
+<th style="text-align:center">Guided-2</th>
+<th style="text-align:center">Guided-3</th>
+<th style="text-align:center">Iterative-2</th>
+<th style="text-align:center">Iterative-3</th>
 </tr>
 </thead>
 <tbody>
@@ -470,18 +480,19 @@ The following table provides a clear understanding of I/O for the both comparati
 </tr>
 </tbody>
 </table>
+<hr>
 <h3 id="mde20243q_interact02_yorokonde1">MDE.20243Q_interact@02_yorokonde@1</h3>
-<p><strong>Recorded-0</strong>  <audio controls controlslist="nodownload" src="./data/orgwav/MDE.20243Q_interact@02_yorokonde@1-0.wav" preload="metadata"></audio></p>
-<h4 id="direction-cycle1-6"><strong>Direction-cycle1</strong></h4>
-<p><strong>Direction:</strong> 全体のトーンを少し低めにして、声に安定感を出してください。父親としての落ち着いた喜びを表現するためです。</p>
+<p><strong>Recorded-0</strong> (Audio before being refined)<br>
+<audio controls controlslist="nodownload" src="./data/orgwav/MDE.20243Q_interact@02_yorokonde@1-0.wav" preload="metadata"></audio></p>
+<p><strong>Direction-cycle1</strong>: 全体のトーンを少し低めにして、声に安定感を出してください。父親としての落ち着いた喜びを表現するためです。</p>
 <table>
 <thead>
 <tr>
-<th style="text-align:center">Recorded(1)</th>
-<th style="text-align:center">Actor-Guided(0)</th>
-<th style="text-align:center">Actor-Guided(1)</th>
-<th style="text-align:center">Iterative(0)</th>
-<th style="text-align:center">Iterative(1)</th>
+<th style="text-align:center">Recorded-1</th>
+<th style="text-align:center">Guided-0</th>
+<th style="text-align:center">Guided-1</th>
+<th style="text-align:center">Iterative-0</th>
+<th style="text-align:center">Iterative-1</th>
 </tr>
 </thead>
 <tbody>
@@ -494,16 +505,16 @@ The following table provides a clear understanding of I/O for the both comparati
 </tr>
 </tbody>
 </table>
-<h4 id="direction-cycle2-6"><strong>Direction-cycle2</strong></h4>
-<p><strong>Direction:</strong> もう少し明瞭に発音してください。特に各言葉の区切りをはっきりさせ、声に自信を感じさせるようにしましょう。</p>
+<hr>
+<p><strong>Direction-cycle2</strong>: もう少し明瞭に発音してください。特に各言葉の区切りをはっきりさせ、声に自信を感じさせるようにしましょう。</p>
 <table>
 <thead>
 <tr>
-<th style="text-align:center">Recorded(2)</th>
-<th style="text-align:center">Actor-Guided(1)</th>
-<th style="text-align:center">Actor-Guided(2)</th>
-<th style="text-align:center">Iterative(1)</th>
-<th style="text-align:center">Iterative(2)</th>
+<th style="text-align:center">Recorded-2</th>
+<th style="text-align:center">Guided-1</th>
+<th style="text-align:center">Guided-2</th>
+<th style="text-align:center">Iterative-1</th>
+<th style="text-align:center">Iterative-2</th>
 </tr>
 </thead>
 <tbody>
@@ -516,16 +527,16 @@ The following table provides a clear understanding of I/O for the both comparati
 </tr>
 </tbody>
 </table>
-<h4 id="direction-cycle3-3"><strong>Direction-cycle3</strong></h4>
-<p><strong>Direction:</strong> 喜びをもう少し抑え気味に、笑い声が混ざらない程度に喜びの余韻を残しつつ話してください。喜びが内に秘められている感じを表現します。</p>
+<hr>
+<p><strong>Direction-cycle3</strong>: 喜びをもう少し抑え気味に、笑い声が混ざらない程度に喜びの余韻を残しつつ話してください。喜びが内に秘められている感じを表現します。</p>
 <table>
 <thead>
 <tr>
-<th style="text-align:center">Recorded(3)</th>
-<th style="text-align:center">Actor-Guided(2)</th>
-<th style="text-align:center">Actor-Guided(3)</th>
-<th style="text-align:center">Iterative(2)</th>
-<th style="text-align:center">Iterative(3)</th>
+<th style="text-align:center">Recorded-3</th>
+<th style="text-align:center">Guided-2</th>
+<th style="text-align:center">Guided-3</th>
+<th style="text-align:center">Iterative-2</th>
+<th style="text-align:center">Iterative-3</th>
 </tr>
 </thead>
 <tbody>
@@ -538,18 +549,19 @@ The following table provides a clear understanding of I/O for the both comparati
 </tr>
 </tbody>
 </table>
+<hr>
 <h3 id="mde20243q_interact12_iyami5">MDE.20243Q_interact@12_iyami@5</h3>
-<p><strong>Recorded-0</strong>  <audio controls controlslist="nodownload" src="./data/orgwav/MDE.20243Q_interact@12_iyami@5-0.wav" preload="metadata"></audio></p>
-<h4 id="direction-cycle1-7"><strong>Direction-cycle1</strong></h4>
-<p><strong>Direction:</strong> 声の高さをほんの少し低くして、少し落ち着いたトーンで話してください。全体として、冷静に言い放つようなニュアンスに近づけましょう。</p>
+<p><strong>Recorded-0</strong> (Audio before being refined)<br>
+<audio controls controlslist="nodownload" src="./data/orgwav/MDE.20243Q_interact@12_iyami@5-0.wav" preload="metadata"></audio></p>
+<p><strong>Direction-cycle1</strong>: 声の高さをほんの少し低くして、少し落ち着いたトーンで話してください。全体として、冷静に言い放つようなニュアンスに近づけましょう。</p>
 <table>
 <thead>
 <tr>
-<th style="text-align:center">Recorded(1)</th>
-<th style="text-align:center">Actor-Guided(0)</th>
-<th style="text-align:center">Actor-Guided(1)</th>
-<th style="text-align:center">Iterative(0)</th>
-<th style="text-align:center">Iterative(1)</th>
+<th style="text-align:center">Recorded-1</th>
+<th style="text-align:center">Guided-0</th>
+<th style="text-align:center">Guided-1</th>
+<th style="text-align:center">Iterative-0</th>
+<th style="text-align:center">Iterative-1</th>
 </tr>
 </thead>
 <tbody>
@@ -562,16 +574,16 @@ The following table provides a clear understanding of I/O for the both comparati
 </tr>
 </tbody>
 </table>
-<h4 id="direction-cycle2-7"><strong>Direction-cycle2</strong></h4>
-<p><strong>Direction:</strong> 各語句の最後をはっきりと切るようにして、言葉に一貫性を持たせてください。特に、語尾が曖昧にならないように気をつけてください。</p>
+<hr>
+<p><strong>Direction-cycle2</strong>: 各語句の最後をはっきりと切るようにして、言葉に一貫性を持たせてください。特に、語尾が曖昧にならないように気をつけてください。</p>
 <table>
 <thead>
 <tr>
-<th style="text-align:center">Recorded(2)</th>
-<th style="text-align:center">Actor-Guided(1)</th>
-<th style="text-align:center">Actor-Guided(2)</th>
-<th style="text-align:center">Iterative(1)</th>
-<th style="text-align:center">Iterative(2)</th>
+<th style="text-align:center">Recorded-2</th>
+<th style="text-align:center">Guided-1</th>
+<th style="text-align:center">Guided-2</th>
+<th style="text-align:center">Iterative-1</th>
+<th style="text-align:center">Iterative-2</th>
 </tr>
 </thead>
 <tbody>
@@ -584,16 +596,16 @@ The following table provides a clear understanding of I/O for the both comparati
 </tr>
 </tbody>
 </table>
-<h4 id="direction-cycle3-4"><strong>Direction-cycle3</strong></h4>
-<p><strong>Direction:</strong> 速度をややゆっくりにして、一言一言をしっかりと重みを持たせるように発話してください。全体として、強調する部分が均等になるように調整しましょう。</p>
+<hr>
+<p><strong>Direction-cycle3</strong>: 速度をややゆっくりにして、一言一言をしっかりと重みを持たせるように発話してください。全体として、強調する部分が均等になるように調整しましょう。</p>
 <table>
 <thead>
 <tr>
-<th style="text-align:center">Recorded(3)</th>
-<th style="text-align:center">Actor-Guided(2)</th>
-<th style="text-align:center">Actor-Guided(3)</th>
-<th style="text-align:center">Iterative(2)</th>
-<th style="text-align:center">Iterative(3)</th>
+<th style="text-align:center">Recorded-3</th>
+<th style="text-align:center">Guided-2</th>
+<th style="text-align:center">Guided-3</th>
+<th style="text-align:center">Iterative-2</th>
+<th style="text-align:center">Iterative-3</th>
 </tr>
 </thead>
 <tbody>
@@ -606,18 +618,19 @@ The following table provides a clear understanding of I/O for the both comparati
 </tr>
 </tbody>
 </table>
+<hr>
 <h3 id="mde20243q_interact13_akireta11">MDE.20243Q_interact@13_akireta@11</h3>
-<p><strong>Recorded-0</strong>  <audio controls controlslist="nodownload" src="./data/orgwav/MDE.20243Q_interact@13_akireta@11-0.wav" preload="metadata"></audio></p>
-<h4 id="direction-cycle1-8"><strong>Direction-cycle1</strong></h4>
-<p><strong>Direction:</strong> 声のトーンをやや低く抑えながら、一度息を吐くように、少し疲れたような響きを加えてください。これにより、呆れた感じがより強調されます。</p>
+<p><strong>Recorded-0</strong> (Audio before being refined)<br>
+<audio controls controlslist="nodownload" src="./data/orgwav/MDE.20243Q_interact@13_akireta@11-0.wav" preload="metadata"></audio></p>
+<p><strong>Direction-cycle1</strong>: 声のトーンをやや低く抑えながら、一度息を吐くように、少し疲れたような響きを加えてください。これにより、呆れた感じがより強調されます。</p>
 <table>
 <thead>
 <tr>
-<th style="text-align:center">Recorded(1)</th>
-<th style="text-align:center">Actor-Guided(0)</th>
-<th style="text-align:center">Actor-Guided(1)</th>
-<th style="text-align:center">Iterative(0)</th>
-<th style="text-align:center">Iterative(1)</th>
+<th style="text-align:center">Recorded-1</th>
+<th style="text-align:center">Guided-0</th>
+<th style="text-align:center">Guided-1</th>
+<th style="text-align:center">Iterative-0</th>
+<th style="text-align:center">Iterative-1</th>
 </tr>
 </thead>
 <tbody>
@@ -630,16 +643,16 @@ The following table provides a clear understanding of I/O for the both comparati
 </tr>
 </tbody>
 </table>
-<h4 id="direction-cycle2-8"><strong>Direction-cycle2</strong></h4>
-<p><strong>Direction:</strong> セリフ全体を少しゆっくりと発話してください。ただし、語尾を自然に切ることで、無理に引き延ばさず、呆れた表現を維持してください。</p>
+<hr>
+<p><strong>Direction-cycle2</strong>: セリフ全体を少しゆっくりと発話してください。ただし、語尾を自然に切ることで、無理に引き延ばさず、呆れた表現を維持してください。</p>
 <table>
 <thead>
 <tr>
-<th style="text-align:center">Recorded(2)</th>
-<th style="text-align:center">Actor-Guided(1)</th>
-<th style="text-align:center">Actor-Guided(2)</th>
-<th style="text-align:center">Iterative(1)</th>
-<th style="text-align:center">Iterative(2)</th>
+<th style="text-align:center">Recorded-2</th>
+<th style="text-align:center">Guided-1</th>
+<th style="text-align:center">Guided-2</th>
+<th style="text-align:center">Iterative-1</th>
+<th style="text-align:center">Iterative-2</th>
 </tr>
 </thead>
 <tbody>
@@ -652,16 +665,16 @@ The following table provides a clear understanding of I/O for the both comparati
 </tr>
 </tbody>
 </table>
-<h4 id="direction-cycle3-5"><strong>Direction-cycle3</strong></h4>
-<p><strong>Direction:</strong> 声のボリュームを一段階下げてください。まるで相手に言っても意味がないと思っているかのように、少し控えめに発話することで、呆れた感情をより表現してください。</p>
+<hr>
+<p><strong>Direction-cycle3</strong>: 声のボリュームを一段階下げてください。まるで相手に言っても意味がないと思っているかのように、少し控えめに発話することで、呆れた感情をより表現してください。</p>
 <table>
 <thead>
 <tr>
-<th style="text-align:center">Recorded(3)</th>
-<th style="text-align:center">Actor-Guided(2)</th>
-<th style="text-align:center">Actor-Guided(3)</th>
-<th style="text-align:center">Iterative(2)</th>
-<th style="text-align:center">Iterative(3)</th>
+<th style="text-align:center">Recorded-3</th>
+<th style="text-align:center">Guided-2</th>
+<th style="text-align:center">Guided-3</th>
+<th style="text-align:center">Iterative-2</th>
+<th style="text-align:center">Iterative-3</th>
 </tr>
 </thead>
 <tbody>
@@ -674,18 +687,19 @@ The following table provides a clear understanding of I/O for the both comparati
 </tr>
 </tbody>
 </table>
+<hr>
 <h3 id="mde20243q_interact25_dokidoki5">MDE.20243Q_interact@25_dokidoki@5</h3>
-<p><strong>Recorded-0</strong>  <audio controls controlslist="nodownload" src="./data/orgwav/MDE.20243Q_interact@25_dokidoki@5-0.wav" preload="metadata"></audio></p>
-<h4 id="direction-cycle1-9"><strong>Direction-cycle1</strong></h4>
-<p><strong>Direction:</strong> 文の始まりから終わりにかけて、声を少しずつ上げていってください。高揚感を出すために、最後の単語を一番高めの声で終えてください。</p>
+<p><strong>Recorded-0</strong> (Audio before being refined)<br>
+<audio controls controlslist="nodownload" src="./data/orgwav/MDE.20243Q_interact@25_dokidoki@5-0.wav" preload="metadata"></audio></p>
+<p><strong>Direction-cycle1</strong>: 文の始まりから終わりにかけて、声を少しずつ上げていってください。高揚感を出すために、最後の単語を一番高めの声で終えてください。</p>
 <table>
 <thead>
 <tr>
-<th style="text-align:center">Recorded(1)</th>
-<th style="text-align:center">Actor-Guided(0)</th>
-<th style="text-align:center">Actor-Guided(1)</th>
-<th style="text-align:center">Iterative(0)</th>
-<th style="text-align:center">Iterative(1)</th>
+<th style="text-align:center">Recorded-1</th>
+<th style="text-align:center">Guided-0</th>
+<th style="text-align:center">Guided-1</th>
+<th style="text-align:center">Iterative-0</th>
+<th style="text-align:center">Iterative-1</th>
 </tr>
 </thead>
 <tbody>
@@ -698,16 +712,16 @@ The following table provides a clear understanding of I/O for the both comparati
 </tr>
 </tbody>
 </table>
-<h4 id="direction-cycle2-9"><strong>Direction-cycle2</strong></h4>
-<p><strong>Direction:</strong> 発話の最初で少し息を吸い込むようにして、少し息苦しい感じを演出してください。これによって、興奮した感じが強調されます。</p>
+<hr>
+<p><strong>Direction-cycle2</strong>: 発話の最初で少し息を吸い込むようにして、少し息苦しい感じを演出してください。これによって、興奮した感じが強調されます。</p>
 <table>
 <thead>
 <tr>
-<th style="text-align:center">Recorded(2)</th>
-<th style="text-align:center">Actor-Guided(1)</th>
-<th style="text-align:center">Actor-Guided(2)</th>
-<th style="text-align:center">Iterative(1)</th>
-<th style="text-align:center">Iterative(2)</th>
+<th style="text-align:center">Recorded-2</th>
+<th style="text-align:center">Guided-1</th>
+<th style="text-align:center">Guided-2</th>
+<th style="text-align:center">Iterative-1</th>
+<th style="text-align:center">Iterative-2</th>
 </tr>
 </thead>
 <tbody>
@@ -720,16 +734,16 @@ The following table provides a clear understanding of I/O for the both comparati
 </tr>
 </tbody>
 </table>
-<h4 id="direction-cycle3-6"><strong>Direction-cycle3</strong></h4>
-<p><strong>Direction:</strong> 発話速度を全体的に速めてみてください。特に、後半の部分は少し急ぎながら話すことで、見つけた時の喜びを強調します。</p>
+<hr>
+<p><strong>Direction-cycle3</strong>: 発話速度を全体的に速めてみてください。特に、後半の部分は少し急ぎながら話すことで、見つけた時の喜びを強調します。</p>
 <table>
 <thead>
 <tr>
-<th style="text-align:center">Recorded(3)</th>
-<th style="text-align:center">Actor-Guided(2)</th>
-<th style="text-align:center">Actor-Guided(3)</th>
-<th style="text-align:center">Iterative(2)</th>
-<th style="text-align:center">Iterative(3)</th>
+<th style="text-align:center">Recorded-3</th>
+<th style="text-align:center">Guided-2</th>
+<th style="text-align:center">Guided-3</th>
+<th style="text-align:center">Iterative-2</th>
+<th style="text-align:center">Iterative-3</th>
 </tr>
 </thead>
 <tbody>
@@ -742,18 +756,19 @@ The following table provides a clear understanding of I/O for the both comparati
 </tr>
 </tbody>
 </table>
+<hr>
 <h3 id="mde20243q_interact27_asette9">MDE.20243Q_interact@27_asette@9</h3>
-<p><strong>Recorded-0</strong>  <audio controls controlslist="nodownload" src="./data/orgwav/MDE.20243Q_interact@27_asette@9-0.wav" preload="metadata"></audio></p>
-<h4 id="direction-cycle1-10"><strong>Direction-cycle1</strong></h4>
-<p><strong>Direction:</strong> 声をもう少し早めにして、言葉が途切れることなく滑らかに発話してください。焦っている感じを出すため、息を一気に吐き出すように発声してください。</p>
+<p><strong>Recorded-0</strong> (Audio before being refined)<br>
+<audio controls controlslist="nodownload" src="./data/orgwav/MDE.20243Q_interact@27_asette@9-0.wav" preload="metadata"></audio></p>
+<p><strong>Direction-cycle1</strong>: 声をもう少し早めにして、言葉が途切れることなく滑らかに発話してください。焦っている感じを出すため、息を一気に吐き出すように発声してください。</p>
 <table>
 <thead>
 <tr>
-<th style="text-align:center">Recorded(1)</th>
-<th style="text-align:center">Actor-Guided(0)</th>
-<th style="text-align:center">Actor-Guided(1)</th>
-<th style="text-align:center">Iterative(0)</th>
-<th style="text-align:center">Iterative(1)</th>
+<th style="text-align:center">Recorded-1</th>
+<th style="text-align:center">Guided-0</th>
+<th style="text-align:center">Guided-1</th>
+<th style="text-align:center">Iterative-0</th>
+<th style="text-align:center">Iterative-1</th>
 </tr>
 </thead>
 <tbody>
@@ -766,16 +781,16 @@ The following table provides a clear understanding of I/O for the both comparati
 </tr>
 </tbody>
 </table>
-<h4 id="direction-cycle2-10"><strong>Direction-cycle2</strong></h4>
-<p><strong>Direction:</strong> 音量を少し上げて、声の強さを強調してください。急いでいるがしっかり伝えたいという感じを出すために、腹式呼吸を意識して響きを強めにしてください。</p>
+<hr>
+<p><strong>Direction-cycle2</strong>: 音量を少し上げて、声の強さを強調してください。急いでいるがしっかり伝えたいという感じを出すために、腹式呼吸を意識して響きを強めにしてください。</p>
 <table>
 <thead>
 <tr>
-<th style="text-align:center">Recorded(2)</th>
-<th style="text-align:center">Actor-Guided(1)</th>
-<th style="text-align:center">Actor-Guided(2)</th>
-<th style="text-align:center">Iterative(1)</th>
-<th style="text-align:center">Iterative(2)</th>
+<th style="text-align:center">Recorded-2</th>
+<th style="text-align:center">Guided-1</th>
+<th style="text-align:center">Guided-2</th>
+<th style="text-align:center">Iterative-1</th>
+<th style="text-align:center">Iterative-2</th>
 </tr>
 </thead>
 <tbody>
@@ -788,18 +803,19 @@ The following table provides a clear understanding of I/O for the both comparati
 </tr>
 </tbody>
 </table>
+<hr>
 <h3 id="mde20243q_interact43_kibou1">MDE.20243Q_interact@43_kibou@1</h3>
-<p><strong>Recorded-0</strong>  <audio controls controlslist="nodownload" src="./data/orgwav/MDE.20243Q_interact@43_kibou@1-0.wav" preload="metadata"></audio></p>
-<h4 id="direction-cycle1-11"><strong>Direction-cycle1</strong></h4>
-<p><strong>Direction:</strong> 声のトーンをもう少し落ち着いた低めに調整してください。少し冷静さを感じさせるように、ゆっくりとしたペースで発声してください。</p>
+<p><strong>Recorded-0</strong> (Audio before being refined)<br>
+<audio controls controlslist="nodownload" src="./data/orgwav/MDE.20243Q_interact@43_kibou@1-0.wav" preload="metadata"></audio></p>
+<p><strong>Direction-cycle1</strong>: 声のトーンをもう少し落ち着いた低めに調整してください。少し冷静さを感じさせるように、ゆっくりとしたペースで発声してください。</p>
 <table>
 <thead>
 <tr>
-<th style="text-align:center">Recorded(1)</th>
-<th style="text-align:center">Actor-Guided(0)</th>
-<th style="text-align:center">Actor-Guided(1)</th>
-<th style="text-align:center">Iterative(0)</th>
-<th style="text-align:center">Iterative(1)</th>
+<th style="text-align:center">Recorded-1</th>
+<th style="text-align:center">Guided-0</th>
+<th style="text-align:center">Guided-1</th>
+<th style="text-align:center">Iterative-0</th>
+<th style="text-align:center">Iterative-1</th>
 </tr>
 </thead>
 <tbody>
@@ -812,16 +828,16 @@ The following table provides a clear understanding of I/O for the both comparati
 </tr>
 </tbody>
 </table>
-<h4 id="direction-cycle2-11"><strong>Direction-cycle2</strong></h4>
-<p><strong>Direction:</strong> 言葉の終わりをしっかりと響かせるように、特に文末の声を少し伸ばして強調してください。ただし、強すぎず自然に聞こえるように意識しましょう。</p>
+<hr>
+<p><strong>Direction-cycle2</strong>: 言葉の終わりをしっかりと響かせるように、特に文末の声を少し伸ばして強調してください。ただし、強すぎず自然に聞こえるように意識しましょう。</p>
 <table>
 <thead>
 <tr>
-<th style="text-align:center">Recorded(2)</th>
-<th style="text-align:center">Actor-Guided(1)</th>
-<th style="text-align:center">Actor-Guided(2)</th>
-<th style="text-align:center">Iterative(1)</th>
-<th style="text-align:center">Iterative(2)</th>
+<th style="text-align:center">Recorded-2</th>
+<th style="text-align:center">Guided-1</th>
+<th style="text-align:center">Guided-2</th>
+<th style="text-align:center">Iterative-1</th>
+<th style="text-align:center">Iterative-2</th>
 </tr>
 </thead>
 <tbody>
@@ -834,16 +850,16 @@ The following table provides a clear understanding of I/O for the both comparati
 </tr>
 </tbody>
 </table>
-<h4 id="direction-cycle3-7"><strong>Direction-cycle3</strong></h4>
-<p><strong>Direction:</strong> 全体のテンポを少しだけゆっくりにして、落ち着きが感じられるようにしてください。リラックスした雰囲気を保ちながら、間を大事にしてください。</p>
+<hr>
+<p><strong>Direction-cycle3</strong>: 全体のテンポを少しだけゆっくりにして、落ち着きが感じられるようにしてください。リラックスした雰囲気を保ちながら、間を大事にしてください。</p>
 <table>
 <thead>
 <tr>
-<th style="text-align:center">Recorded(3)</th>
-<th style="text-align:center">Actor-Guided(2)</th>
-<th style="text-align:center">Actor-Guided(3)</th>
-<th style="text-align:center">Iterative(2)</th>
-<th style="text-align:center">Iterative(3)</th>
+<th style="text-align:center">Recorded-3</th>
+<th style="text-align:center">Guided-2</th>
+<th style="text-align:center">Guided-3</th>
+<th style="text-align:center">Iterative-2</th>
+<th style="text-align:center">Iterative-3</th>
 </tr>
 </thead>
 <tbody>
@@ -856,6 +872,7 @@ The following table provides a clear understanding of I/O for the both comparati
 </tr>
 </tbody>
 </table>
+<hr>
 
         
         
