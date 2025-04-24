@@ -57,7 +57,7 @@
 </li>
 <li><a href="#performance-of-the-proposed-method-according-to-the-direction-difficulty">Performance of the proposed method according to the direction difficulty</a>
 <ul>
-<li><a href="#easy-case">Easy case</a></li>
+<li><a href="#successful-case">Successful case</a></li>
 <li><a href="#difficult-case">Difficult case</a></li>
 </ul>
 </li>
@@ -397,25 +397,88 @@ Transcription:<br>
 </table>
 <hr>
 <h2 id="performance-of-the-proposed-method-according-to-the-direction-difficulty">Performance of the proposed method according to the direction difficulty</h2>
-<h3 id="easy-case">Easy case</h3>
-<p>Direction: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+<!-- Direction: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+| Speech prompt | Refined by ours | Refined (recorded) |
+|:----:|:----:|:----:|
+| <audio controls controlslist="nodownload" src="./data/1.wav" preload="metadata"></audio> | <audio controls controlslist="nodownload" src="./data/1.wav" preload="metadata"></audio> | <audio controls controlslist="nodownload" src="./data/1.wav" preload="metadata"></audio> |
+ -->
+<h3 id="successful-case">Successful case</h3>
+<p>Trascription: こんなテスト、お母さんに見せれないよ〜。
+<strong>Direction</strong>: 全体的にリズムを少し崩して、言葉が流れすぎないように。緊張して言葉に詰まりやすいイメージで発声してください。</p>
 <table>
 <thead>
 <tr>
+<th style="text-align:center">Refined (Recorded)</th>
+<th style="text-align:center">Refined by ours</th>
 <th style="text-align:center">Speech prompt</th>
-<th style="text-align:center">Refined</th>
-<th style="text-align:center">Refined (recorded)</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align:center"><audio controls controlslist="nodownload" src="./data/1.wav" preload="metadata"></audio></td>
-<td style="text-align:center"><audio controls controlslist="nodownload" src="./data/1.wav" preload="metadata"></audio></td>
-<td style="text-align:center"><audio controls controlslist="nodownload" src="./data/1.wav" preload="metadata"></audio></td>
+<td style="text-align:center"><audio controls controlslist="nodownload" src="./data/orgwav/FMH.20243Q_interact@34_urotaeta@196-2.wav" preload="metadata"></audio></td>
+<td style="text-align:center"><audio controls controlslist="nodownload" src="data/after_cut/proposed__FMH.20243Q_interact@34_urotaeta@196-1/8_2.wav" preload="metadata"></audio></td>
+<td style="text-align:center"><audio controls controlslist="nodownload" src="data/after_cut/proposed__FMH.20243Q_interact@34_urotaeta@196-1/ref8_2.wav" preload="metadata"></audio></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p>Transcription: コーヒーを淹れてくれるなら、ブラックがいいな。<br>
+<strong>Direction</strong>: 声のトーンをもう少し落ち着いた低めに調整してください。少し冷静さを感じさせるように、ゆっくりとしたペースで発声してください。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Refined (Recorded)</th>
+<th style="text-align:center">Refined by ours</th>
+<th style="text-align:center">Speech prompt</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><audio controls controlslist="nodownload" src="./data/orgwav/MDE.20243Q_interact@43_kibou@1-1.wav" preload="metadata"></audio></td>
+<td style="text-align:center"><audio controls controlslist="nodownload" src="data/after_cut/proposed__MDE.20243Q_interact@43_kibou@1-1/10_1.wav" preload="metadata"></audio></td>
+<td style="text-align:center"><audio controls controlslist="nodownload" src="data/after_cut/proposed__MDE.20243Q_interact@43_kibou@1-1/ref10_1.wav" preload="metadata"></audio></td>
 </tr>
 </tbody>
 </table>
 <h3 id="difficult-case">Difficult case</h3>
+<p>Transcription: ハリウッドスターがいたの？見たかったなぁ…。<br>
+<strong>Direction</strong>: 最初の音を少し詰まらせるように、一瞬ためらいを持ってから言葉を出してください。感情がこみ上げてきて、言葉が少し出づらい感じを声の息遣いで表現してみましょう。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Refined (Recorded)</th>
+<th style="text-align:center">Refined by ours</th>
+<th style="text-align:center">Speech prompt</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><audio controls controlslist="nodownload" src="./data/orgwav/FMH.20243Q_interact@24_zannen@3-2.wav" preload="metadata"></audio></td>
+<td style="text-align:center"><audio controls controlslist="nodownload" src="data/after_cut/proposed__FMH.20243Q_interact@24_zannen@3-1/3_2.wav" preload="metadata"></audio></td>
+<td style="text-align:center"><audio controls controlslist="nodownload" src="data/after_cut/proposed__FMH.20243Q_interact@24_zannen@3-1/ref3_2.wav" preload="metadata"></audio></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p>Transcription: コーヒーを淹れてくれるなら、ブラックがいいな。<br>
+<strong>Direction</strong>: 言葉の終わりをしっかりと響かせるように、特に文末の声を少し伸ばして強調してください。ただし、強すぎず自然に聞こえるように意識しましょう。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Refined (Recorded)</th>
+<th style="text-align:center">Refined by ours</th>
+<th style="text-align:center">Speech prompt of Iterative</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><audio controls controlslist="nodownload" src="./data/orgwav/MDE.20243Q_interact@43_kibou@1-2.wav" preload="metadata"></audio></td>
+<td style="text-align:center"><audio controls controlslist="nodownload" src="data/after_cut/proposed__MDE.20243Q_interact@43_kibou@1-1/10_2.wav" preload="metadata"></audio></td>
+<td style="text-align:center"><audio controls controlslist="nodownload" src="data/after_cut/proposed__MDE.20243Q_interact@43_kibou@1-1/ref10_2.wav" preload="metadata"></audio></td>
+</tr>
+</tbody>
+</table>
+<hr>
 
         
         
